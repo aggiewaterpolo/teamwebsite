@@ -28,8 +28,6 @@ a:hover{text-decoration:underline}
 .card h3{margin:.25rem 0}
 .section{padding:2rem 0}
 .section h2{margin:.2rem 0 1rem 0;color:var(--maroon)}
-.footer{background:#111;color:#eaeaea;margin-top:3rem}
-.footer a{color:#eaeaea;text-decoration:underline}
 .list{padding-left:1.25rem}
 .kv{display:grid;grid-template-columns:140px 1fr;gap:.25rem .75rem}
 .kv div{padding:.05rem 0}
@@ -45,4 +43,62 @@ table.scores th, table.scores td{border:1px solid #0001;padding:.5rem;text-align
 table.scores th{background:#faf6f6}
 @media (max-width:720px){
   .kv{grid-template-columns:1fr}
+}
+
+.footer a{color:#eaeaea;text-decoration:underline}
+.footer {
+  background-color: #111; /* or your footer bg color */
+  color: #fff;
+  margin-top:3rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* stacks on small screens */
+}
+
+.footer-left {
+  font-size: 0.9rem;
+}
+
+.footer-left a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-left a:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between sponsors and icons */
+}
+
+.sponsor-logos {
+  display: flex;
+  gap: 10px;
+}
+
+.sponsor-logos img {
+  height: 24px; /* adjust as needed */
+  filter: brightness(0) invert(1); /* makes logos white if they’re dark PNG/SVG */
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
 }
