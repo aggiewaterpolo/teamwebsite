@@ -45,60 +45,72 @@ table.scores th{background:#faf6f6}
   .kv{grid-template-columns:1fr}
 }
 
-.footer a{color:#eaeaea;text-decoration:underline}
 .footer {
-  background-color: #111; /* or your footer bg color */
+  background-color: #000; /* footer background */
   color: #fff;
-  margin-top:3rem;
+  padding: 20px 0;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* stacks on small screens */
-}
-
-.footer-left {
-  font-size: 0.9rem;
-}
-
-.footer-left a {
+.footer a {
   color: #fff;
   text-decoration: none;
 }
 
-.footer-left a:hover {
+.footer a:hover {
   text-decoration: underline;
 }
 
-.footer-right {
+/* Row 1: Address + Social */
+.footer-top {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px; /* space between sponsors and icons */
-}
-
-.sponsor-logos {
-  display: flex;
-  gap: 10px;
-}
-
-.sponsor-logos img {
-  height: 24px; /* adjust as needed */
-  filter: brightness(0) invert(1); /* makes logos white if they’re dark PNG/SVG */
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
 .social-icons {
   display: flex;
-  gap: 10px;
+  gap: 12px;
+  margin-right: 20px; /* space from right edge */
 }
 
 .social-icons img {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   transition: transform 0.2s ease;
 }
 
 .social-icons img:hover {
   transform: scale(1.1);
 }
+
+/* Row 2: Thank you text */
+.sponsor-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Row 3: Sponsor logos */
+.sponsor-logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.sponsor-logos img {
+  height: 60px; /* bigger logos */
+  object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
