@@ -1,5 +1,6 @@
 # Texas A&M Men's Water Polo — Static Site
 https://aggiewaterpolo.github.io/teamwebsite/
+
 This is a static HTML/CSS site recreated from the team's Wix site so it can be hosted anywhere (GitHub Pages, Netlify, etc.).
 
 ## Structure
