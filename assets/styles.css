@@ -40,6 +40,182 @@ a:hover {
   padding: 1.25rem;
 }
 
+/* Page Hero */
+.page-hero {
+  background: var(--maroon);
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Donate Page Styling */
+.donate-section {
+  padding: 40px 20px;
+  background: #f8f8f8;
+}
+
+.donate-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #500000; /* Texas A&M maroon */
+  margin-bottom: 10px;
+}
+
+.donate-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.donate-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.donate-card h3 {
+  color: #500000;
+  margin-bottom: 15px;
+}
+
+.donate-card ol {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.donate-card a {
+  color: #500000;
+  font-weight: bold;
+}
+
+.donate-card code {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.donate-cta {
+  text-align: center;
+}
+
+.donate-button {
+  background: #500000;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.donate-button:hover {
+  background: #7a0000;
+}
+
+.donate-thanks {
+  text-align: center;
+  margin-top: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+/* About Content Layout */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 720px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Standings List */
+.standings {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.standings li {
+  background: var(--cream);
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--maroon);
+  border-radius: 4px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.standings-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.standings-block .year h4 {
+  margin: 0 0 0.25rem;
+  color: var(--maroon);
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--maroon);
+  display: inline-block;
+  padding-bottom: 0.1rem;
+}
+
+.standings-block .year p {
+  margin: 0.25rem 0;
+  background: var(--cream);
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* Team Photos */
+.team-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.team-photos img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.team-photos figcaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .team-photos {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* =========================
    Header & Navigation
 ========================= */
@@ -127,7 +303,6 @@ a:hover {
     gap: 0.5rem;
   }
 }
-
 
 /* =========================
    Hero Section
