@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 150px; /* match your sticky header height */
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -647,11 +651,22 @@ table.scores {
   width: 100%;
 }
 
-table.scores th,
-table.scores td {
+table.scores tr {
+  height: auto;
+}
+
+table.scores th {
   border: 1px solid #0001;
   padding: 0.5rem;
   text-align: left;
+}
+
+table.scores td {
+  border: 1px solid #0001;
+  padding: 0.25rem 0.4rem; /* tighter vertical & horizontal padding */
+  font-size: 0.9rem;       /* optional: slightly smaller text */
+  line-height: 1.2;        /* reduce vertical spacing inside cells */
+  vertical-align: middle; /* keep text centered vertically */
 }
 
 table.scores th {
@@ -753,5 +768,274 @@ table.scores th {
 
   .calendar-container iframe {
     height: 500px;
+  }
+}
+
+/* =========================
+   Bracket + Results Hybrid
+   (Drop-in styles for new HTML)
+========================= */
+
+/* Event header accent */
+.event {
+  margin-bottom: 2.5rem;
+}
+
+.event-header {
+  margin-bottom: 1rem;
+  border-left: 6px solid var(--maroon, #500000);
+  padding-left: 0.75rem;
+}
+
+.event-header h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: var(--maroon, #500000);
+}
+
+/* Bracket container — no flex */
+.bracket {
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Optional: nice scrollbar on desktop */
+.bracket::-webkit-scrollbar {
+  height: 8px;
+}
+.bracket::-webkit-scrollbar-thumb {
+  background: #d7d7d7;
+  border-radius: 999px;
+}
+
+/* Two-column grid for matches */
+.round {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  grid-auto-flow: row;           /* fill across, then wrap to next row */
+  gap: 1.5rem;
+  align-items: stretch;          /* both cells in a row match height */
+}
+
+/* Keep cards stacked vertically within their column */
+.match {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: #fff;
+  border-width: 3px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1.25rem 1.5rem;  /* more breathing room inside */
+}
+
+.match:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.09);
+  border-color: #d8d8d8;
+}
+
+/* Team rows inside a match */
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+}
+
+.team img.team-logo {
+  width: 48px;   /* bigger circle */
+  height: 48px;
+  border-radius: 50%;
+  object-fit: contain; /* prevents cropping inside the circle */
+  background-color: #fff; /* optional: white background behind transparent logos */
+  padding: 4px; /* optional: space between logo graphic and circle edge */
+}
+
+
+.team .name {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.team .score {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 0.3px;
+}
+
+/* Win/Loss coloring (applies to the team element with .win) */
+.team.win .score {
+  color: #0a7a2f; /* win green */
+}
+.team:not(.win) .score {
+  color: #a61b1b; /* loss red */
+}
+
+/* Meta line under the two teams (MVP etc.) */
+.meta {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #a67c00; /* gold tone for MVP line */
+  text-align: center;
+}
+
+/* =========================
+   Scores table touch-up
+   (keeps your existing table styles; adds polish for new markup)
+========================= */
+.event .scores {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden; /* rounded corners */
+  margin-bottom: 2rem;
+}
+
+.event .scores thead th {
+  background: var(--maroon, #500000);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.event .scores tbody td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.event .scores tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.event .scores td img.team-logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.event .scores td .vs {
+  margin: 0 0.35rem;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* Make the result column feel a bit stronger */
+.event .scores tbody td:nth-child(2) {
+  font-weight: 700;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .round {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;    /* stack in source order on small screens */
+  }
+
+  .team .name {
+    font-size: 0.9rem;
+  }
+  .team .score {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .event-header h3 {
+    font-size: 1.1rem;
+  }
+  /* Optional: stack table into “cards” on very small screens */
+  .event .scores thead {
+    display: none;
+  }
+  .event .scores tbody tr {
+    display: block;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 0.6rem;
+  }
+  .event .scores tbody td {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+    padding: 0.4rem 0;
+  }
+}
+
+/* Sidebar layout */
+.scores-nav {
+  position: sticky;
+  top: 0; /* below your site header; adjust if needed */
+  align-self: flex-start;
+  height: calc(100vh - 0px); /* full viewport height */
+  overflow: auto;
+  padding: 0.75rem 0.75rem 1rem;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  width: 260px;
+}
+
+/* If your page uses a main container, place nav and content side-by-side */
+.scores-content {
+  margin-left: 280px; /* sidebar width + gap */
+}
+
+/* Title */
+.scores-nav__title {
+  font-weight: 700;
+  color: var(--maroon, #500000);
+  margin-bottom: 0.5rem;
+}
+
+/* List */
+.scores-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links */
+.scores-nav__link {
+  display: block;
+  padding: 0.5rem 0.4rem;
+  margin: 0.125rem 0;
+  text-decoration: none;
+  border-radius: 6px;
+  color: #222;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.scores-nav__link:hover {
+  background: #f6f6f6;
+}
+
+/* Active link */
+.scores-nav__link.is-active {
+  color: #fff;
+  background: var(--maroon, #500000);
+}
+
+/* Responsive: collapse on small screens */
+@media (max-width: 900px) {
+  .scores-nav {
+    position: static;
+    width: auto;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .scores-content {
+    margin-left: 0;
   }
 }
