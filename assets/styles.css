@@ -232,7 +232,7 @@ html {
 /* Sticky Year Sidebar */
 .year-nav {
   position: fixed;
-  top: 120px;            /* adjust if header height changes */
+  top: 155px;            /* adjust if header height changes */
   right: 20px;
   display: flex;
   flex-direction: column;
@@ -722,51 +722,75 @@ table.scores th {
   color: #fff;
   text-decoration: none;
 }
-
 .footer a:hover {
   text-decoration: underline;
 }
 
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
+/* Grid layout: 
+   address (left) | icons (right)
+   sponsor text centered across
+   logos below (unchanged position)
+*/
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "address icons"
+    "thanks  icons"
+    "logos   logos";
+  align-items: start;
+  row-gap: 6px; /* tight space between address and thank-you */
 }
 
+/* Address */
+.footer-address {
+  grid-area: address;
+  font-size: 0.95rem;
+}
+
+/* Thank-you text centered full width */
+.sponsor-text {
+  grid-area: thanks;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 6px 0 0;
+}
+
+/* Social icons on right, vertically centered between address + thank-you */
 .social-icons {
+  grid-area: icons;
   display: flex;
   gap: 12px;
-  margin-right: 20px;
+  align-self: center;      /* center within the spanned rows */
 }
-
 .social-icons img {
-  width: 26px;
-  height: 26px;
+  width: 60px;
+  height: 60px;
   transition: transform 0.2s ease;
 }
-
 .social-icons img:hover {
   transform: scale(1.1);
 }
 
-.sponsor-text {
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 15px;
+/* Make icons span rows 1–2 to sit between the two text lines */
+.social-icons {
+  /* Explicit row span for reliable centering */
+  grid-row: 1 / 3;
 }
 
+/* Sponsor logos row (unchanged position) */
 .sponsor-logos {
+  grid-area: logos;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
   align-items: center;
   padding: 1rem 0;
+  margin-top: 6px; /* small nudge down to match your first image */
 }
-
 .sponsor-logos img {
   max-height: 60px;
   width: auto;
@@ -774,6 +798,30 @@ table.scores th {
   flex: 0 1 100px;
 }
 
+/* Mobile: stack cleanly, keep center alignment */
+@media (max-width: 700px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "address"
+      "icons"
+      "thanks"
+      "logos";
+    row-gap: 10px;
+  }
+  .social-icons {
+    justify-content: center;
+    grid-row: auto; /* reset span on mobile */
+  }
+  .social-icons img {
+    width: 50px;
+    height: 50px;
+  }
+  .sponsor-logos img {
+    max-height: 50px;
+    flex: 0 1 80px;
+  }
+}
 
 /* =========================
    Responsive
@@ -1128,4 +1176,62 @@ table.scores th {
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+}
+
+.officers {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.officer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(to right, #fff, #f8f4f4);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.officer:nth-child(even) {
+  flex-direction: row-reverse;
+  background: linear-gradient(to left, #fff, #f8f4f4);
+}
+
+.officer:hover {
+  background: linear-gradient(to right, #50000015, #f8f4f4);
+}
+
+.officer img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.officer:hover img {
+  transform: scale(1.05);
+}
+
+.officer .info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.officer .info h3 span {
+  font-weight: normal;
+  color: #777;
+}
+
+.officer .role {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #500000; /* Aggie maroon */
+}
+
+.officer .bio {
+  line-height: 1.5;
 }
