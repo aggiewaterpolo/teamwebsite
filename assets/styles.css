@@ -625,13 +625,13 @@ html {
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1rem;
 }
-
 .person {
   background: #fff;
   border: 1px solid #0001;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .person img {
@@ -639,6 +639,7 @@ html {
   height: 180px;
   object-fit: contain;
   background: #f2f2f2;
+  transition: transform 0.3s ease;
 }
 
 .person .body {
@@ -654,6 +655,16 @@ html {
 .person .meta {
   font-size: 0.95rem;
   color: #555;
+}
+
+/* Hover effects */
+.person:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.person:hover img {
+  transform: scale(1.05);
 }
 
 .notice {
