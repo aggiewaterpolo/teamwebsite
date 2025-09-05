@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Coaches • Texas A&M Men's Water Polo</title>
+  <title>Home • Texas A&M Men's Water Polo</title>
   <link rel="stylesheet" href="assets/styles.css">
   <meta name="description" content="Texas A&M Men's Water Polo — Aggie Water Polo">
 </head>
@@ -26,42 +26,98 @@
       <a href="a-team.html">A Team</a>
       <a href="b-team.html">B Team</a>
       <a href="officers.html">Officers</a>
-      <a href="coaches.html">Coaches</a>
+      <a href="coaches.html">Stream</a>
       <a href="https://sofctamu.estore.flywire.com/products?storeCatalog=24133" target="_blank" rel="noopener noreferrer">Store</a>
     </nav>
   </div>
 </header>
 
-<section class="section container">
-  <h2>Meet Our Coaches</h2>
-  <div class="roster">
-    <div class="person">
-      <img alt="Head Coach — Jeffrey LeBeau" src="https://static.wixstatic.com/media/deb014_c4ba0b1028954af6bd756c20127b18a6~mv2.jpg/v1/fill/w_640,h_430,al_c,q_85,enc_avif,quality_auto/Jeff%20Lebeau.jpg">
-      <div class="body">
-        <div class="name">Jeffrey LeBeau — Head Coach</div>
-        <div class="meta">Coaches practices and heads tournament games; 80+ games coached across 10U–18U age groups.</div>
-      </div>
-    </div>
-    <div class="person">
-      <img alt="Assistant Coach — Shannon Connolly" src="https://static.wixstatic.com/media/deb014_2fd7d963a9504c8989564c6aac0b92ef~mv2.jpg/v1/fill/w_640,h_430,al_c,q_85,enc_avif,quality_auto/Shannon%20Connolly.jpg">
-      <div class="body">
-        <div class="name">Shannon Connolly — Assistant Coach</div>
-        <div class="meta">Former MAAC champion at Marist; CWPA All‑American First Team; English Literature grad ’24.</div>
-      </div>
-    </div>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Game Livestream</h1>
+    <h2 class="tournament-title">[Sept 14–15, 2025] Regular Season Tournament — Rice University</h2>
   </div>
 </section>
 
+
+<!-- Offline Overlay -->
+<div id="offline-overlay">
+  <div class="offline-message">Stream is Offline</div>
+</div>
+
+
+<!-- Main content: give it an ID so we can toggle it -->
+<main id="page-content" class="container">
+
+  <!-- Announcement Bar -->
+  <div id="announcement" class="announcement">
+    <p><strong>Announcement:</strong> Stream will start 15 minutes late due to weather delay.</p>
+  </div>
+
+  <!-- Livestream Embed -->
+  <!-- 
+      https://www.youtube.com/embed/live_stream?UCJYkMQ1WOZJBz8XmgyAcTIA 
+      https://www.youtube.com/embed/live_stream?channel=UCJYkMQ1WOZJBz8XmgyAcTIA&autoplay=1&controls=0&modestbranding=1&mute=0
+      https://www.youtube.com/channel/UCJYkMQ1WOZJBz8XmgyAcTIA/live
+  -->
+  <div class="livestream">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/@aggiewaterpolo/UCJYkMQ1WOZJBz8XmgyAcTIA/live"
+        title="YouTube Livestream"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Schedule -->
+  <section class="schedule">
+    <h3>Weekend Schedule</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Time</th>
+          <th>Matchup</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Saturday</td>
+          <td>10:00 AM</td>
+          <td>Texas A&M vs UT Austin</td>
+        </tr>
+        <tr>
+          <td>Saturday</td>
+          <td>2:00 PM</td>
+          <td>Texas A&M vs Rice</td>
+        </tr>
+        <tr>
+          <td>Sunday</td>
+          <td>11:00 AM</td>
+          <td>Texas A&M vs SMU</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<!-- Offline Overlay -->
+<div id="offline-overlay">
+  <div class="offline-message">Stream is Offline</div>
+</div>
+
 <footer class="footer">
   <div class="container footer-grid">
-    <!-- Row 1, Col 1: Address -->
     <div class="footer-address">
-      <strong>Address:</strong> 187 Corrington Dr, College Station, TX 77843 • 
+      <strong>Address:</strong> 187 Corrington Dr, College Station, TX 77843 •
       <strong>Email:</strong>
       <a href="mailto:tamuwaterpolo.president@gmail.com">tamuwaterpolo.president@gmail.com</a>
     </div>
 
-    <!-- Row 1–2, Col 2: Social icons (span two rows to center vertically) -->
     <div class="social-icons">
       <a href="https://www.instagram.com/aggiewaterpolo/?hl=en" target="_blank" rel="noopener noreferrer">
         <img src="https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/Footer/instagram.png" alt="Instagram">
@@ -74,10 +130,8 @@
       </a>
     </div>
 
-    <!-- Row 2, Col 1–2: Centered thank-you text -->
     <div class="sponsor-text">Thank you to our sponsors!</div>
 
-    <!-- Row 3, Col 1–2: Sponsor logos (position unchanged, just centered) -->
     <div class="sponsor-logos">
       <img src="https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/Footer/kap7.webp" alt="KAP7">
       <img src="https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/Footer/cwpa.png" alt="CWPA">
@@ -87,6 +141,32 @@
     </div>
   </div>
 </footer>
+
 <script src="assets/script.js"></script>
+
+<script>
+  // Toggle: show/hide announcement
+  const showAnnouncement = false;                     // toggle here
+  const announcementEl = document.getElementById('announcement');
+  if (!showAnnouncement && announcementEl) {
+    announcementEl.remove();
+  }
+
+  // Toggle: stream online/offline
+  const streamOnline = true;                         // toggle here
+
+  const pageContent = document.getElementById('page-content');
+  const hero = document.querySelector('.hero');
+  const offlineOverlay = document.getElementById('offline-overlay');
+
+  if (streamOnline) {
+    offlineOverlay.style.display = 'none';
+  } else {
+    if (pageContent) pageContent.style.display = 'none';
+    if (hero) hero.style.display = 'none';
+    offlineOverlay.style.display = 'flex';
+  }
+
+</script>
 </body>
 </html>
