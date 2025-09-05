@@ -81,7 +81,13 @@
       <figcaption>B Team — 2024 Fall Season</figcaption>
     </figure>
   </div>
+  <!-- Lightbox container -->
+  <div id="lightbox" class="lightbox">
+    <a href="#" class="lightbox-close">&times;</a>
+    <img src="" alt="Enlarged photo">
+  </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -121,5 +127,26 @@
 </footer>
 
 <script src="assets/script.js"></script>
+<script>
+document.querySelectorAll('.team-photos img').forEach(img => {
+  img.addEventListener('click', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    lightboxImg.src = img.src; // Use same image — or swap for higher-res if available
+    lightbox.style.display = 'flex';
+  });
+});
+
+document.querySelector('.lightbox-close').addEventListener('click', (e) => {
+  e.preventDefault();
+  document.getElementById('lightbox').style.display = 'none';
+});
+
+document.getElementById('lightbox').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) {
+    e.currentTarget.style.display = 'none';
+  }
+});
+</script>
 </body>
 </html>
