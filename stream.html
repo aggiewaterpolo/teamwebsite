@@ -32,37 +32,85 @@
   </div>
 </header>
 
-
-<section class="section container">
-  <h2>Announcements</h2>
-  <div class="notice">
-    <p><strong>HUGE Shoutout</strong> to our A TEAM who got <strong>7th in NATIONALS</strong>! Good work on the season, boys! Huge thank you to all of our athletes, parents, friends, and fans who made this possible. <em>Stay tuned for off‑season activities.</em></p>
-  </div>
-</section>
-
-<section class="section container">
-  <h2>Men's Water Polo Calendar</h2>
-  <div class="calendar-container">
-    <iframe 
-      src="https://calendar.google.com/calendar/embed?src=tamumwpfundraising%40gmail.com&ctz=America%2FChicago&bgcolor=%23f7f5f0&color=%23500000"
-      frameborder="0" 
-      scrolling="no">
-    </iframe>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Game Livestream</h1>
+    <h2 class="tournament-title">[Sept 14–15, 2025] Regular Season Tournament — Rice University</h2>
   </div>
 </section>
 
 
+<!-- Offline Overlay -->
+<div id="offline-overlay">
+  <div class="offline-message">
+    <div class="offline-title">Stream is Offline</div>
+    <div class="offline-subtitle">Next Expected Stream Date<br>DATE</div>
+  </div>
+</div>
+
+
+<!-- Main content: give it an ID so we can toggle it -->
+<main id="page-content" class="container">
+
+  <!-- Announcement Bar -->
+  <div id="announcement" class="announcement">
+    <p><strong>Announcement:</strong> Stream will start 15 minutes late due to weather delay.</p>
+  </div>
+
+  <!-- Livestream Embed -->
+  <div class="livestream">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/live_stream?channel=UCJYkMQ1WOZJBz8XmgyAcTIA&autoplay=1&controls=0&modestbranding=1&mute=0"
+        title="YouTube Livestream"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Schedule -->
+  <section class="schedule">
+    <h3>Weekend Schedule</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Time</th>
+          <th>Matchup</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Saturday</td>
+          <td>10:00 AM</td>
+          <td>Texas A&M vs UT Austin</td>
+        </tr>
+        <tr>
+          <td>Saturday</td>
+          <td>2:00 PM</td>
+          <td>Texas A&M vs Rice</td>
+        </tr>
+        <tr>
+          <td>Sunday</td>
+          <td>11:00 AM</td>
+          <td>Texas A&M vs SMU</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
 
 <footer class="footer">
   <div class="container footer-grid">
-    <!-- Row 1, Col 1: Address -->
     <div class="footer-address">
-      <strong>Address:</strong> 187 Corrington Dr, College Station, TX 77843 • 
+      <strong>Address:</strong> 187 Corrington Dr, College Station, TX 77843 •
       <strong>Email:</strong>
       <a href="mailto:tamuwaterpolo.president@gmail.com">tamuwaterpolo.president@gmail.com</a>
     </div>
 
-    <!-- Row 1–2, Col 2: Social icons (span two rows to center vertically) -->
     <div class="social-icons">
       <a href="https://www.instagram.com/aggiewaterpolo/?hl=en" target="_blank" rel="noopener noreferrer">
         <img src="https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/Footer/instagram.png" alt="Instagram">
@@ -75,10 +123,8 @@
       </a>
     </div>
 
-    <!-- Row 2, Col 1–2: Centered thank-you text -->
     <div class="sponsor-text">Thank you to our sponsors!</div>
 
-    <!-- Row 3, Col 1–2: Sponsor logos (position unchanged, just centered) -->
     <div class="sponsor-logos">
       <img src="https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/Footer/kap7.webp" alt="KAP7">
       <img src="https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/Footer/cwpa.png" alt="CWPA">
@@ -90,5 +136,41 @@
 </footer>
 
 <script src="assets/script.js"></script>
+
+<script>
+  // Toggle: show/hide announcement
+  const showAnnouncement = false;                     // toggle here
+  const announcementEl = document.getElementById('announcement');
+  if (!showAnnouncement && announcementEl) {
+    announcementEl.remove();
+  }
+
+  // Toggle: stream online/offline
+  const streamOnline = false;                         // toggle here
+
+  const pageContent = document.getElementById('page-content');
+  const hero = document.querySelector('.hero');
+  const offlineOverlay = document.getElementById('offline-overlay');
+
+  if (streamOnline) {
+    offlineOverlay.style.display = 'none';
+  } else {
+    if (pageContent) pageContent.style.display = 'none';
+    if (hero) hero.style.display = 'none';
+    offlineOverlay.style.display = 'flex';
+  }
+
+  // Set your next stream date here
+  const nextStreamDate = "10/05/2025";
+
+  // Update the overlay subtitle
+  document.addEventListener("DOMContentLoaded", () => {
+    const subtitle = document.querySelector(".offline-subtitle");
+    if (subtitle) {
+      subtitle.innerHTML = `Next Expected Stream Date<br>${nextStreamDate}`;
+    }
+  });
+
+</script>
 </body>
 </html>

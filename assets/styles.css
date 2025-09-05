@@ -1338,6 +1338,19 @@ html {
 }
 
 .offline-message {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.offline-title {
   font-size: 2rem;
   font-weight: bold;
+}
+
+.offline-subtitle {
+  font-size: 1.25rem;
+  font-weight: normal;
+  opacity: 0.9;
 }
