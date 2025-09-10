@@ -1,0 +1,15 @@
+Baylor University- https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/baylor.png
+Cal Poly - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/calpoly.png
+LSU - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/lsu.png
+Rice University - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/rice.png
+TAMU A - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/tamu_a.png
+TAMU B - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/tamu_b.png
+Texas Tech - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/texastech.png
+Texas State - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/txstate.png
+University of Houston - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/uh.png
+UMich - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/umich.png
+UNT - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/unt.png
+UT A - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/ut_a.png
+UT B - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/ut_b.png
+Washington University - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/washu.png
+University of Virginia - https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/University%20Logos/uva.png
