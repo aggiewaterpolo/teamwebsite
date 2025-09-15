@@ -44,6 +44,14 @@ a:hover {
   padding: 1.25rem;
 }
 
+@media (max-width: 720px) {
+
+  .container {
+    padding: 1.5rem;
+  }
+
+}
+
 /* Page Hero */
 .page-hero {
   background: var(--maroon);
@@ -100,6 +108,8 @@ a:hover {
 .donate-card ol {
   padding-left: 20px;
   line-height: 1.6;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .donate-card a {
@@ -527,7 +537,7 @@ html {
     border-bottom: none;
   }
 
-  /* Reorder links to match your desired visual layout */
+  /* Reorder Tabs MOBILE
   .menu a:nth-child(1) { order: 1; }  /* Home */
   .menu a:nth-child(2) { order: 3; }  /* About */
   .menu a:nth-child(3) { order: 5; }  /* Scores */
@@ -696,6 +706,19 @@ html {
 .section h2 {
   margin: 0.2rem 0 1rem;
   color: var(--maroon);
+}
+
+@media (max-width: 720px) {
+
+  .section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .section h2 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 .list {
@@ -1355,6 +1378,24 @@ html {
   line-height: 1.5;
 }
 
+@media (max-width: 720px) {
+  /* ... your existing mobile styles ... */
+
+  .officer,
+  .officer:nth-child(even) {
+    /* Stack the image and text vertically on mobile */
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .officer img {
+    /* Make the image responsive and center it */
+    width: 100%;
+    max-width: 250px; /* Still constrain the image to a reasonable size */
+    height: auto;
+    margin: 0 auto 1rem;
+  }
+}
 
 /* Announcement Bar */
 .announcement {
