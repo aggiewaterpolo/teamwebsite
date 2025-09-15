@@ -39,4 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if(btn && menu){
     btn.addEventListener('click', () => menu.classList.toggle('open'));
   }
-});
+}
+)
+
+
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.getElementById('menu').classList.toggle('show');
+  });
+
+;

@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-padding-top: 150px; /* match your sticky header height */
 }
@@ -463,6 +467,45 @@ html {
   color: white;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 720px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    width: 100%;
+    background: var(--maroon);
+    padding: 0.5rem 0;
+  }
+
+  .menu.show {
+    display: flex; /* show when toggled */
+  }
+
+  .menu a {
+    padding: 0.75rem;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
 }
 
 /* =========================
