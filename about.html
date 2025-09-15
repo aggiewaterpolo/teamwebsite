@@ -130,26 +130,5 @@
 </footer>
 
 <script src="assets/script.js"></script>
-<script>
-document.querySelectorAll('.team-photos img').forEach(img => {
-  img.addEventListener('click', () => {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = lightbox.querySelector('img');
-    lightboxImg.src = img.src; // Use same image — or swap for higher-res if available
-    lightbox.style.display = 'flex';
-  });
-});
-
-document.querySelector('.lightbox-close').addEventListener('click', (e) => {
-  e.preventDefault();
-  document.getElementById('lightbox').style.display = 'none';
-});
-
-document.getElementById('lightbox').addEventListener('click', (e) => {
-  if (e.target === e.currentTarget) {
-    e.currentTarget.style.display = 'none';
-  }
-});
-</script>
 </body>
 </html>

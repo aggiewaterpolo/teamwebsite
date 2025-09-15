@@ -16,10 +16,6 @@
   box-sizing: border-box;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 html {
   scroll-padding-top: 150px; /* match your sticky header height */
 }
@@ -484,58 +480,64 @@ html {
 /* Mobile behavior */
 @media (max-width: 720px) {
   .nav {
-    /* allow the dropdown panel to sit beneath the brand row */
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
 
-  /* Show hamburger, keep it on the right of the brand row */
   .menu-toggle {
     display: block;
-    margin-left: auto;
   }
 
-  /* Menu becomes a collapsible vertical panel below the brand+button row */
-  .nav .menu {
-    order: 3;                  /* ensure it flows under the row */
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
-    display: block;            /* required for height animation */
-    background: var(--maroon);
-    border-top: 1px solid rgba(255,255,255,0.15);
-
-    /* collapsed by default */
+    z-index: 999;
     max-height: 0;
-    overflow: hidden;
+    visibility: hidden;
+    overflow-y: hidden;
 
-    /* smooth slide animation */
-    transition: max-height 260ms ease;
+    /* New styles for two-column layout */
+    display: flex; /* Ensure it's a flex container */
+    flex-wrap: wrap; /* Allow items to wrap to a new line */
+    background-color: var(--maroon);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    transition: max-height 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
 
-  /* Links stacked, full-width, readable tap targets */
-  .nav .menu a {
-    display: block;
-    padding: 0.9rem 1rem;
-    color: #fff;               /* ensure readable on maroon */
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.08);
-  }
-
-  /* Expanded state toggled via JS */
-  .nav .menu.is-open {
-    /* make it tall enough to fit all links; scroll if still too tall */
+  .menu.is-open {
     max-height: 80vh;
+    visibility: visible;
     overflow-y: auto;
   }
 
-  /* Tame the big logo on phones */
-  .brand img {
-    height: 60px;
+  /* Each link now takes up 50% of the menu width */
+  .menu a {
+    flex: 0 0 50%;
+    padding: 1rem 1.25rem;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  /* Prevent any horizontal overflow from the header/menu */
-  .site-header, .nav, .menu {
-    max-width: 100%;
+  /* The last row of links should not have a bottom border */
+  .menu a:nth-last-child(-n+2) {
+    border-bottom: none;
   }
+
+  /* Reorder links to match your desired visual layout */
+  .menu a:nth-child(1) { order: 1; }  /* Home */
+  .menu a:nth-child(2) { order: 3; }  /* About */
+  .menu a:nth-child(3) { order: 5; }  /* Scores */
+  .menu a:nth-child(4) { order: 7; }  /* Photos */
+  .menu a:nth-child(5) { order: 9; }  /* Donate */
+  .menu a:nth-child(6) { order: 2; }  /* A Team */
+  .menu a:nth-child(7) { order: 4; }  /* B Team */
+  .menu a:nth-child(8) { order: 6; }  /* Behind The Team */
+  .menu a:nth-child(9) { order: 8; }  /* Stream */
+  .menu a:nth-child(10) { order: 10; } /* Store */
 }
 
 /* Optional: respect reduced motion */
@@ -556,7 +558,8 @@ html {
   background: linear-gradient(180deg, var(--maroon), var(--maroon-dark));
   box-shadow: 0 2px 8px rgba(0,0,0,0.25);
   min-height: unset;       /* remove any fixed tall height */
-  padding: 0;              /* remove extra space inside header */  position: sticky;
+  padding: 0;              /* remove extra space inside header */  
+  position: sticky;
   top: 0;
   z-index: 1000;
   background-color: #fff;
