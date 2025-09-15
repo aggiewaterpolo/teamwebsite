@@ -1,4 +1,4 @@
-  // Toggle: show/hide announcement -- STREAM
+// Toggle: show/hide announcement -- STREAM
   const showAnnouncement = false;                     // toggle here
   const announcementEl = document.getElementById('announcement');
   if (!showAnnouncement && announcementEl) {
@@ -21,9 +21,7 @@
   }
 
   // Set your next stream date here
-  const nextStreamDate = "10/05/2025";
-
-  // Update the overlay subtitle
+  const nextStreamDate = "10/05/2025"; // Update the overlay subtitle
   document.addEventListener("DOMContentLoaded", () => {
     const subtitle = document.querySelector(".offline-subtitle");
     if (subtitle) {
@@ -33,17 +31,8 @@
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.querySelector('#menuBtn');
-  const menu = document.querySelector('#menu');
-  if(btn && menu){
-    btn.addEventListener('click', () => menu.classList.toggle('open'));
-  }
-}
-)
-
-
-(function () {
+  //mobile nav
+  (function () {
     const btn = document.querySelector('.menu-toggle');
     const menu = document.getElementById('menu');
 
@@ -59,11 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape' && menu.classList.contains('is-open')) {
         menu.classList.remove('is-open');
         btn.setAttribute('aria-expanded', 'false');
-        btn.focus();
       }
     });
+
+    // Optional: close if a link is clicked
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
   })();
-
-
-
-;
