@@ -469,7 +469,7 @@ html {
   font-weight: bold;
 }
 
-/* Hide hamburger on desktop */
+/* Hamburger hidden on desktop */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -477,36 +477,74 @@ html {
   border: none;
   color: #fff;
   cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
 }
 
-/* Mobile styles */
+/* Mobile behavior */
 @media (max-width: 720px) {
+  .nav {
+    /* allow the dropdown panel to sit beneath the brand row */
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* Show hamburger, keep it on the right of the brand row */
   .menu-toggle {
     display: block;
+    margin-left: auto;
   }
 
-  .nav {
-    flex-wrap: wrap;
-  }
-
-  .menu {
-    display: none; /* hidden by default */
-    flex-direction: column;
+  /* Menu becomes a collapsible vertical panel below the brand+button row */
+  .nav .menu {
+    order: 3;                  /* ensure it flows under the row */
     width: 100%;
+    display: block;            /* required for height animation */
     background: var(--maroon);
-    padding: 0.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    /* collapsed by default */
+    max-height: 0;
+    overflow: hidden;
+
+    /* smooth slide animation */
+    transition: max-height 260ms ease;
   }
 
-  .menu.show {
-    display: flex; /* show when toggled */
-  }
-
-  .menu a {
-    padding: 0.75rem;
+  /* Links stacked, full-width, readable tap targets */
+  .nav .menu a {
+    display: block;
+    padding: 0.9rem 1rem;
+    color: #fff;               /* ensure readable on maroon */
     text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* Expanded state toggled via JS */
+  .nav .menu.is-open {
+    /* make it tall enough to fit all links; scroll if still too tall */
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  /* Tame the big logo on phones */
+  .brand img {
+    height: 60px;
+  }
+
+  /* Prevent any horizontal overflow from the header/menu */
+  .site-header, .nav, .menu {
+    max-width: 100%;
   }
 }
+
+/* Optional: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nav .menu {
+    transition: none;
+  }
+}
+
 
 /* =========================
    Header & Navigation

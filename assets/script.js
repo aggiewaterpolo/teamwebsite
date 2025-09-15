@@ -43,8 +43,27 @@ document.addEventListener('DOMContentLoaded', () => {
 )
 
 
-  document.querySelector('.menu-toggle').addEventListener('click', function() {
-    document.getElementById('menu').classList.toggle('show');
-  });
+(function () {
+    const btn = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+
+    if (!btn || !menu) return;
+
+    btn.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Optional: close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('is-open')) {
+        menu.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.focus();
+      }
+    });
+  })();
+
+
 
 ;
