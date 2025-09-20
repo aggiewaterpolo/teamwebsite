@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Toggle: show/hide announcement -- STREAM
   const showAnnouncement = false; // toggle here
   const announcementEl = document.getElementById('announcement');
-  if (showAnnouncement && announcementEl) {
+  if (!showAnnouncement && announcementEl) {
     announcementEl.remove();
   }
 
