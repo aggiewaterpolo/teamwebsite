@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Toggle: stream online/offline -- STREAM
-  const streamOnline = false; // toggle here
+  const streamOnline = TRUE; // toggle here
   const pageContent = document.getElementById('page-content');
   const hero = document.querySelector('.hero');
   const offlineOverlay = document.getElementById('offline-overlay');
