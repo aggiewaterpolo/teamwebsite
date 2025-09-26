@@ -1,4 +1,4 @@
-# Texas A&M Men's Water Polo — Static Site
+# Texas A&M Men's Water Polo
 https://aggiewaterpolo.github.io/teamwebsite/
 https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/
 
