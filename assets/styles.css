@@ -1492,7 +1492,7 @@ html {
 
 /* Offline Overlay */
 #offline-overlay {
-  position: absolute;
+  position: relative;
   top: calc(var(--header-height, 0px) + var(--hero-height, 0px));
   left: 0;
   width: 100%;
@@ -1523,4 +1523,73 @@ html {
   font-size: 1.25rem;
   font-weight: normal;
   opacity: 0.9;
+}
+
+/* --- Styling for the schedule table on the offline overlay --- */
+/* --- Styling for the schedule table on the offline overlay --- */
+#offline-overlay .offline-message h3 {
+  /* Keep the title font size and spacing, but make it stand out */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem; /* Slightly larger */
+  color: var(--gold); /* Use Gold for the heading */
+  font-weight: 700; /* Bolder */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#offline-overlay table {
+  width: 100%;
+  max-width: 700px; /* Slightly wider table */
+  border-collapse: collapse;
+  /* CHANGE: Use a light background for high contrast */
+  background-color: #fff; 
+  border-radius: 10px; /* Rounder corners */
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add a deep shadow for depth */
+}
+
+/* Header (The Day, Time, Matchup row) */
+#offline-overlay thead th {
+  /* CHANGE: Use a darker maroon for the header */
+  background-color: var(--maroon-dark); 
+  color: #fff;
+  font-weight: bold;
+  padding: 14px 20px; /* More padding */
+  text-align: left;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+}
+
+/* All Cells */
+#offline-overlay th,
+#offline-overlay td {
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0; /* Use a very light grey border */
+  color: var(--ink); /* Dark text for readability on white background */
+}
+
+/* Table Body Rows */
+#offline-overlay tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect for professionalism */
+#offline-overlay tbody tr:hover {
+  background-color: #fff8e1; /* Very light gold tint on hover */
+}
+
+/* Styling for the first column (Day) */
+#offline-overlay tbody td:first-child {
+  font-weight: 600;
+}
+
+/* Styling for the last column (Matchup) */
+#offline-overlay tbody td:last-child {
+  font-weight: 500;
+}
+
+#offline-overlay tbody tr:last-child td {
+  border-bottom: none;
 }
