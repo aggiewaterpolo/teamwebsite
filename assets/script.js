@@ -21,9 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // To add/remove announcements, simply add/remove strings from this list.
   // Use HTML tags (<strong>, <a>, etc.) for formatting!
   const indexAnnouncements = [
-    'Pay your dues by <strong>FRIDAY, SEPTEMBER 26TH!</strong> Either hand in a cash/check to Parker or pay them online <a href="http://sofctamu.estore.flywire.com/products/2025-2026-team-dues-367218" style="text-decoration: underline;">here</a>.',
-    'Make sure to come to practice on Sunday for <strong>MEDIA DAY PICTURES, POLOS, AND SUITS.</strong>',
-    'Fill out your <strong>DRIVER\'S AGREEMENT</strong> <a href="https://sportclubs.tamu.edu/driverrecord/create" style="text-decoration: underline;">here!</a>'
+    'Good luck to the athletes playing <strong>THIS WEEKEND.</strong> Check out our new live stream with an updated Tournament Schedule under <strong> "Stream"</strong>.',
+    'Fill out your <strong>DRIVER\'S AGREEMENT</strong> <a href="https://sportclubs.tamu.edu/driverrecord/create" style="text-decoration: underline;">here!</a> Also don\'t forget to pay dues <a href="http://sofctamu.estore.flywire.com/products/2025-2026-team-dues-367218" style="text-decoration: underline;">here</a>.'
   ];
 
 
