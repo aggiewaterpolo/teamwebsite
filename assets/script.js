@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   
   // --- STREAM.HTML CONTROLS (Only applies to stream.html) ---
-  const streamOnline = true; // Set to 'false' to show the offline overlay
+  const streamOnline = false; // Set to 'false' to show the offline overlay
   const nextStreamDate = "TBA";
   const showSchedule = false; // Set to 'false' to show "Schedule TBD"
 
@@ -21,8 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // To add/remove announcements, simply add/remove strings from this list.
   // Use HTML tags (<strong>, <a>, etc.) for formatting!
   const indexAnnouncements = [
-    'Good luck to the athletes playing <strong>THIS WEEKEND.</strong> Check out our new live stream with an updated Tournament Schedule under <strong> "Stream"</strong>.',
-    'Fill out your <strong>DRIVER\'S AGREEMENT</strong> <a href="https://sportclubs.tamu.edu/driverrecord/create" style="text-decoration: underline;">here!</a> Also don\'t forget to pay dues <a href="http://sofctamu.estore.flywire.com/products/2025-2026-team-dues-367218" style="text-decoration: underline;">here</a>.'
+    'Texas A&M Water polo <strong>crushed</strong> it this weekend! <strong>A TEAM</strong> is headed to <strong>NATIONALS</strong> after a dominant 1st-place finish at Conference. <strong>B TEAM</strong> brought the heat too, landing <strong>5TH OVERALL</strong> in the Texas Division.'
   ];
 
 
