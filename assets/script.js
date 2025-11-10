@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // To add/remove announcements, simply add/remove strings from this list.
   // Use HTML tags (<strong>, <a>, etc.) for formatting!
   const indexAnnouncements = [
-    'Texas A&amp;M Water Polo is ranked&nbsp;<strong>3rd NATIONALLY!</strong> With the season officially over, stay tuned for post-season activities.'
+    'Texas A&amp;M Water Polo is ranked&nbsp;<strong>3rd NATIONALLY!</strong> With the season officially over, stay tuned for the post-season.'
   ];
 
 
