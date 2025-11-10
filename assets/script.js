@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // To add/remove announcements, simply add/remove strings from this list.
   // Use HTML tags (<strong>, <a>, etc.) for formatting!
   const indexAnnouncements = [
-    'Texas A&M Water polo <strong>crushed</strong> it this weekend! <strong>A TEAM</strong> is headed to <strong>NATIONALS</strong> after a dominant 1st-place finish at Conference. <strong>B TEAM</strong> brought the heat too, landing <strong>5TH OVERALL</strong> in the Texas Division.'
+    'Texas A&amp;M Water Polo is ranked&nbsp;<strong>3rd NATIONALLY!</strong> With the season officially over, stay tuned for post-season activities.'
   ];
 
 
