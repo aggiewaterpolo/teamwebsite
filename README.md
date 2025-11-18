@@ -4,6 +4,7 @@ https://raw.githubusercontent.com/aggiewaterpolo/teamwebsite/refs/heads/main/
 
 
 Optimizations/Projects to be done:
+- create a "how to join the team" page
 - Fix "Events/Expand" Button in scores.html
 - change behind_the_team to behind-the-team
 - behind_the_team.html - make it so people can click each officer card and it zoom in and provide more details
