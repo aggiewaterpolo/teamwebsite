@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // To add/remove announcements, simply add/remove strings from this list.
   // Use HTML tags (<strong>, <a>, etc.) for formatting!
   const indexAnnouncements = [
-    'Texas A&amp;M Water Polo is ranked&nbsp;<strong>3rd NATIONALLY!</strong> Off-season is here, check out the calendar to see our upcoming events.' ,
-    'Elections will be held on <strong>February 16th</strong> at the Rec. Make sure to run for a position if you\'re interested and remember to vote!'
+    'Rev Roundup game day is <strong>This Saturday, 3-28</strong>. Games start at 11:30 AM' ,
+    "All players planning to travel to San Diego or Dallas <strong>MUST</strong> fill out a driver's agreement !"
   ];
 
 
