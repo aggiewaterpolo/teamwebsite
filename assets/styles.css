@@ -1473,7 +1473,7 @@ html {
   border-collapse: collapse;
   background: #fff;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: scroll;
 }
 .schedule th, .schedule td {
   padding: 0.75rem;
