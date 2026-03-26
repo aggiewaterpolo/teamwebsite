@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Use HTML tags (<strong>, <a>, etc.) for formatting!
   const indexAnnouncements = [
     'Rev Roundup game day is <strong>This Saturday, 3-28</strong>. Games start at 11:30 AM' ,
-    "All players planning to travel to San Diego or Dallas <strong>MUST</strong> fill out a driver's agreement! <a href="https://sportclubs.tamu.edu/driverrecord/create" target="_blank"</a>"
+    'All players planning to travel to San Diego or Dallas <strong>MUST</strong> fill out a driver agreement! <a href="https://sportclubs.tamu.edu/driverrecord/create" target="_blank"</a>'
 
   ];
 
