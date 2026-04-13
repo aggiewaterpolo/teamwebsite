@@ -21,8 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // To add/remove announcements, simply add/remove strings from this list.
   // Use HTML tags (<strong>, <a>, etc.) for formatting!
   const indexAnnouncements = [
-    'Rev Roundup game day is <strong>This Saturday, 3-28</strong>. Games start at 11:30 AM' ,
-    'All players planning to travel to San Diego or Dallas <strong>MUST</strong> fill out a driver agreement! <a href="https://sportclubs.tamu.edu/driverrecord/create" target="_blank"</a>'
+    'All players planning to travel to San Diego <strong>MUST</strong> pay the second payment <a href="https://sofctamu.estore.flywire.com/products/2026-ucsd-tournament-dues-431382" target="_blank">here</a>'
 
   ];
 
