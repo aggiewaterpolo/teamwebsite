@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // To add/remove announcements, simply add/remove strings from this list.
   // Use HTML tags (<strong>, <a>, etc.) for formatting!
   const indexAnnouncements = [
-    'All players planning to travel to San Diego <strong>MUST</strong> pay the second payment <a href="https://sofctamu.estore.flywire.com/products/2026-ucsd-tournament-dues-431382" target="_blank">here</a>'
+    
 
   ];
 
