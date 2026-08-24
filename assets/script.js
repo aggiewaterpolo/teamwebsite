@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // To add/remove announcements, simply add/remove strings from this list.
   // Use HTML tags (<strong>, <a>, etc.) for formatting!
   const indexAnnouncements = [
-  'Interested in joining the team? <strong> Attend an informational at 3:15 pm Sunday, Aug. 30 or Sep. 6 in Room 1132 at The Rec</strong> Practice is after at 4 pm',
+  'Interested in joining the team? <strong> Attend an informational at 3:15 pm Sunday, Aug. 30 or Sep. 6 in Room 1132 at The Rec.</strong> Practice is after at 4 pm',
   'All players who want to practice must have an AOR/WOL form filled out. Fill it out here: <a href="https://forms.gle/7g6k1Z5v1z5z5z5z5" target="_blank">AOR/WOL Form</a>'
   ];
 
