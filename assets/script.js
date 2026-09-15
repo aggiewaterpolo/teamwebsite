@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // To add/remove announcements, simply add/remove strings from this list.
   // Use HTML tags (<strong>, <a>, etc.) for formatting!
   const indexAnnouncements = [
-  'Interested in joining the team? <strong> Attend an informational at 3:15 pm Sunday, Aug. 30 or Sep. 6 in Room 1132 at The Rec.</strong> Practice is after at 4 pm',
-  'All players who want to practice must have an AOR/WOL form filled out. Fill it out here: <a href="https://sportclubs.tamu.edu/clubs/joinClub" target="_blank">AOR/WOL Form</a>'
+  'Pay dues, cash/check to Travis Thames, or card through the Aggie Water Polo flywire. Pay by Friday, September 18th',
+  'Fill out drivers agreements to go to the first tournament. Fill it out here: <a href="https://sportclubs.tamu.edu/driverrecord/create" target="_blank">Driver agreement Form</a>'
   ];
 
 
