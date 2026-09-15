@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // --- STREAM.HTML CONTROLS (Only applies to stream.html) ---
   const streamOnline = false; // Set to 'false' to show the offline overlay
-  const nextStreamDate = "Saturday, October 3, 2026";
+  const nextStreamDate = "Saturday, September 26th, 2026";
   const showSchedule = true; // Set to 'false' to show "Schedule TBD"
 
   // --- ANNOUNCEMENT CONTROLS (Applies to pages with announcement containers) ---
