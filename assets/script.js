@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- ANNOUNCEMENT CONTROLS (Applies to pages with announcement containers) ---
   
   // A. STREAM.HTML Announcement (Single notice)
-  const streamShowAnnouncement = false; // Set to 'false' to hide the entire bar on stream.html
-  const streamAnnouncementText = "Game will start 15 minutes late due to weather delay."; 
+  const streamShowAnnouncement = true; // Set to 'false' to hide the entire bar on stream.html
+  const streamAnnouncementText = 'Find the game stream here: <a href="https://cwpatv.com/">CWPA Stream site</a>'; 
 
   // B. INDEX.HTML Announcements (Multiple notices)
   // To add/remove announcements, simply add/remove strings from this list.
