@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Use HTML tags (<strong>, <a>, etc.) for formatting!
   const indexAnnouncements = [
   'Pay dues, cash/check to Travis Thames, or card through the Aggie Water Polo flywire. Pay by Friday, September 18th',
-  'Fill out drivers agreements to go to the first tournament. Fill it out here: <a href="https://sportclubs.tamu.edu/driverrecord/create" target="_blank">Driver agreement Form</a>'
+  'Find the game stream here: <a href="https://cwpatv.com/">CWPA Stream site</a>'
   ];
 
 
