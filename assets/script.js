@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // --- STREAM.HTML CONTROLS (Only applies to stream.html) ---
   const streamOnline = true; // Set to 'false' to show the offline overlay
-  const nextStreamDate = "Saturday, September 26th, 2026";
+  const nextStreamDate = "Saturday, October 2nd, 2026";
   const showSchedule = true; // Set to 'false' to show "Schedule TBD"
 
   // --- ANNOUNCEMENT CONTROLS (Applies to pages with announcement containers) ---
   
   // A. STREAM.HTML Announcement (Single notice)
-  const streamShowAnnouncement = true; // Set to 'false' to hide the entire bar on stream.html
+  const streamShowAnnouncement = false; // Set to 'false' to hide the entire bar on stream.html
   const streamAnnouncementText = 'Find the game stream here: <a href="https://cwpatv.com/">CWPA Stream site</a>'; 
 
   // B. INDEX.HTML Announcements (Multiple notices)
