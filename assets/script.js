@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // A. STREAM.HTML Announcement (Single notice)
   const streamShowAnnouncement = true; // Set to 'false' to hide the entire bar on stream.html
-  const streamAnnouncementText = 'Find the game stream here: <a href="https://www.youtube.com/watch?v=YuMwqbPn64U"> Stream site</a>'; 
+  const streamAnnouncementText = 'Find the game stream here: <a href="https://www.youtube.com/watch?v=h3-KJMMu7IM"> Stream site</a>'; 
 
   // B. INDEX.HTML Announcements (Multiple notices)
   // To add/remove announcements, simply add/remove strings from this list.
   // Use HTML tags (<strong>, <a>, etc.) for formatting!
   const indexAnnouncements = [
   'Pay dues, cash/check to Travis Thames, or card through the Aggie Water Polo flywire. Pay by Friday, September 18th',
- 'Find the game stream here: <a href="https://www.youtube.com/watch?v=YuMwqbPn64U"> Stream site</a>',
+ 'Find the game stream here: <a href="https://www.youtube.com/watch?v=h3-KJMMu7IM"> Stream site</a>',
   ];
 
 
